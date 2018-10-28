@@ -1,0 +1,25 @@
+server:
+#  web应用
+  port: 8002
+
+spring:
+  application:
+#  应用名
+    name: gate-way
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#        exclude: flyway
+
+#zuul:
+#  routes:
+#    api-a-url:
+#      path: /api-a/**
+#      serviceId: helloService
+
+eureka:
+  client:
+    service-url:
+    defaultZone: http://localhost:8001/eureka/

@@ -1,0 +1,22 @@
+spring:
+  application:
+#  应用名
+    name: eureka-server
+  profiles:
+#    当前是使用哪个配置项
+    active: dev
+
+server:
+#应用端口
+  port: 8001
+eureka:
+  server:
+    enable-self-preservation: false
+  instance:
+    hostname: localhost
+  client:
+#  register-with-eureka和fetch-registry为false表明自己是一个eureka server
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

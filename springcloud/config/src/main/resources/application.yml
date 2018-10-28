@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: config
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: 'classpath:/conf/'
+##          addLabelLocations: false
+#        allowOverride: true
+#        overrideNone: true
+#        overrideSystemProperties: true
+#  profiles:
+#    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/visoncheng/demo.git
+          username: 1040953670@qq.com
+          password: goodthannow123
+          search-paths: springcloud/configserver
+#      allow-override: true
+server:
+  port: 8002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://localhost:8001/eureka/'

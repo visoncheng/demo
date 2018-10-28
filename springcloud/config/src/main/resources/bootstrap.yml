@@ -1,0 +1,16 @@
+#spring:
+#  application:
+#    name: config
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: 'classpath:/conf/'
+##          addLabelLocations: false
+#        allowOverride: true
+#        overrideNone: true
+#        overrideSystemProperties: false
+#  profiles:
+#    active: native
+
+encrypt.key=11111

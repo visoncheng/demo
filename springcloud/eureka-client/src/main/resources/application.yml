@@ -1,0 +1,27 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: eureka-client
+#  cloud:
+#    config:
+#      label: dev
+#      profile: dit
+#      uri: http://localhost:8002
+
+#spring.cloud.config.
+
+#actuator 请求路径已经由/ 改成/actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#        exclude: flyway
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://localhost:8001/eureka/'
+
+#music: 菊花台1111
